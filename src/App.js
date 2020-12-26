@@ -26,7 +26,7 @@ const App = () => {
       if (localStorage.getItem('jwt') && globalState.profile === null) {
         // fetch GET to get profile details
         fetch(
-          'http://localhost:3001/users/profile',
+          `${process.env.REACT_APP_BACKEND}/users/profile`,
           {
             method: 'GET',
             headers: {

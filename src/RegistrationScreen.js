@@ -97,7 +97,7 @@ const RegistrationScreen = () => {
 
             // 4. Send to backend
             fetch(
-                'http://localhost:3001/users/register',
+                `${process.env.REACT_APP_BACKEND}/users/register`,
                 {
                     method: 'POST',
                     body: formData,

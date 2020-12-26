@@ -87,7 +87,7 @@ const ProfileScreen = () => {
 
             // 4. Send to backend
             fetch(
-                'http://localhost:3001/users/update',
+                `${process.env.REACT_APP_BACKEND}/users/update`,
                 {
                     method: 'PUT',
                     body: formData,

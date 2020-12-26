@@ -57,7 +57,7 @@ const LoginScreen = () => {
 
             // 4. Send to backend
             fetch(
-                'http://localhost:3001/users/login',
+                `${process.env.REACT_APP_BACKEND}/users/login`,
                 {
                     method: 'POST',
                     body: JSON.stringify(formData),
